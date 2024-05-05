@@ -1,0 +1,229 @@
+body, div, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+
+/* Style the toolbar */
+#header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #9d37dd;
+    width: 100%;
+    /* overflow: visible; */
+
+}
+
+#toolbar-wrapper {
+    display: flex;
+    /* overflow: visible; */
+}
+
+#header #account {
+    cursor: pointer;
+}
+
+#logo {
+    color: #fff;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#logo img {
+    height: 55pt; /* adjust as needed */
+    width: auto; /* maintain aspect ratio */
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: #fff;
+    border: #7704ff solid 2px;
+    border-radius: 12px;
+}
+
+/* Style the user actions menu */
+#user-actions-menu {
+    display: none;
+    position: absolute;
+    right: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#user-actions-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff5e00;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+/* Style the dropdown button */
+.dropbtn {
+    background-color: #fff;
+    color: #7704ff;
+    padding: 24px;
+    font-size: 22px;
+    border: #7704ff solid 2px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+/* .dropdown:hover .dropbtn{
+    border: #7704ff solid 4px;
+} */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the dropdown menu (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    overflow-y: auto; /* Add this line */
+    max-height: 90vh; /* Add this line */
+    border-radius: 15px;
+    border: #7704ff solid 2px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content button {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #ae00ffb5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+#footer {
+    background-color: #9d37dd;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    flex-shrink: 0;
+
+}
+
+
+
+
+
+
+
+
+.full-screen-menu{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000AA;
+}
+
+/* General form styles*/
+.form{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.form .fields{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Style the labels */
+.form label{
+    margin-bottom: 5px;
+    color: #800000; /* Maroon */
+}
+
+.form button{
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-color: #ae00ffb5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.input-field{
+    margin-bottom: 15px;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ae00ffb5;
+    border-radius: 15px;
+}
+
+.input-field:hover{
+    background-color: #ae00ff38;
+    border: #1e00ff solid 4px;
+}
+
+
+
+.error-display{
+    margin-top: 0%;
+    margin-bottom: 12px;
+    color:#ff0000;
+}
+
+
+
+/*general form styling*/
+.invalid-form-field {
+    background-color: #ff0000aa; /*change to border*/
+}
+
+
+
+/*misc*/
+.pointer {
+    cursor: pointer;
+}

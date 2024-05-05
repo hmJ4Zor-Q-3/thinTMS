@@ -1,0 +1,13 @@
+<!--I advise not focusing on this currently. It's sparse currently, and not strictly essential to the minimum viable product-->
+{% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+    <title>User Account Info</title>
+{% endblock %}
+
+{% block contents %}
+    <h1>Account Information</h1>
+    <p>Username: <span id="username"></span></p>
+    <p>Email: <span id="email"></span></p>
+    <!-- Add more account information fields as needed -->
+{% endblock %}

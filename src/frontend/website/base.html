@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head%}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
+        <!--script tag placed at bottom to try to fix an error-->
+        {% endblock %}
+    </head>
+
+    <body>
+        <div id="variables" hidden>
+            <div id="var_homepage_route">{{ homepage_route }}</div>
+            <div id="var_workspace_route">{{ workspace_route }}</div>
+
+            <div id="var_max_username_length">{{ var_max_username_length }}</div>
+            <div id="password_min_length">{{ password_min_length }}</div>
+        </div>
+
+
+
+        <div class="full-screen-menu" id="login-menu" hidden>
+            <div class="form">
+                <h2>Please enter your login information:</h2>
+                <div class="fields">
+                    <label for="l-username">Username:</label>
+                    <input class="input-field" type="text" id="l-username" name="username" required>
+                    <p class="error-display" id="l-username-errors"></p>
+
+                    <label for="l-password">Password:</label>
+                    <input class="input-field" type="password" id="l-password" name="password" required>
+                    <p class="error-display" id="l-password-errors"></p>
+                </div>
+                <button id="l-submit">Login</button>
+                <button id="l-close-btn">Cancel</button>
+                <p class="error-display" id="l-errors"></p>
+            </div>
+        </div>
+
+        <div class="full-screen-menu" id="register-menu" hidden>
+            <div class="form">
+                <h2>Please enter your desired information:</h2>
+                <div class="fields">
+                    <label for="r-username">Username:</label>
+                    <input class="input-field" type="text" id="r-username" name="username" required>
+                    <p class="error-display" id="r-username-errors"></p>
+
+                    <label for="r-password">Password:</label>
+                    <input class="input-field" type="password" id="r-password" name="password" required>
+                    <p class="error-display" id="r-password-errors"></p>
+                </div>
+                <button id="r-submit">Register</button>
+                <button id="r-close-btn">Cancel</button>
+                <p class="error-display" id="r-errors"></p>
+            </div>
+        </div>
+
+
+
+        <div id="header">
+           <div id="logo">
+                <img src="{{ url_for('static', filename='images/thinTMSlogo_draft.png') }}" alt="Logo">
+           </div>
+
+           <div class="dropdown">
+               <button class="dropbtn" id="account-button"><b>Account</b></button>
+               <div class="dropdown-content">
+                   <div id="logged-in-uam-buttons" hidden>
+                       <button id="workspace-button">Workspace</button>
+                       <button id="logout-button">Logout</button>
+                   </div>
+                   <div id="default-uam-buttons">
+                       <button id="login-button">Login</button>
+                       <button id="register-button">Register</button>
+                   </div>
+               </div>
+           </div>
+        </div>
+
+        <div id="content">
+            {% block contents %}
+
+            {% endblock %}
+        </div>
+
+        <div id="footer">
+            <p>&copy; Group 1 footer placeholder - CONTACT US? ETC?</p>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="{{ url_for('static', filename='base.js') }}"></script>
+    </body>
+</html>

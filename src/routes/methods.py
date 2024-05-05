@@ -1,0 +1,4 @@
+class HTTPMethods:
+    DELETE_METHOD = 'DELETE'
+    GET_METHOD = 'GET'
+    POST_METHOD = 'POST'

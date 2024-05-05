@@ -1,0 +1,12 @@
+#content{
+    margin-top: 0%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 0%;
+    background-color: #eee;
+}
+
+#content h1{
+    color: #000;
+    text-align: center;
+}

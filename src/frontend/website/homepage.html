@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='blog.css') }}">
+{% endblock %}
+
+{% block contents %}
+    <h1>Welcome to thinTMS!</h1>
+    <h2>Your new lightweight task manager</h2>
+    <p>thinTMS is a task manager passionately built by Roberto Cipriano and Reagan Marie Sage Grantham for everyday use. It features...</p>
+{% endblock %}
+

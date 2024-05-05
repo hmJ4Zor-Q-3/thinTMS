@@ -1,0 +1,321 @@
+#group-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    overflow: auto;
+    background-color: #b49af4;
+    padding: 10px;
+    padding-top: 110px;
+    z-index: 1;
+}
+
+#groups-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+    background-color: #d6ceff;
+}
+
+#task-list {
+    margin: 25px;
+    padding: 25px;
+    border: #5d00ff solid 2px;
+}
+
+#task-list li {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#placeholderimg {
+    width: 100%;  /* Adjust as needed */
+    height: auto;
+}
+
+
+#content.workspace-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Style the content */
+#content.workspace-page #group-toolbar {
+    padding-left: 15px;
+    background-color: #d6ceff;
+    margin-left: 200px;
+    margin-top: 0px; /* Adjust if needed */
+    flex-grow: 1;
+}
+
+/* Style the workspace */
+#workspace #add-task-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #9900ff;
+}
+
+#workspace h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    font-style: italic;
+    color:#9900ff;
+    border-bottom: outset 2px #ee00ffd8;
+}
+
+#workspace h2, #task-list-header, #task-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;}
+
+/* Style the form */
+/* #add-task-form {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+} */
+
+#add-task-form label {
+    margin-bottom: 5px;
+    color: #9900ff; /* Maroon */
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Style the input fields */
+#add-task-form input[type="text"], #add-task-form input[type="date"], #add-task-form input[type="time"], #add-task-form select, #add-task-form group-select {
+    margin-bottom: 15px;
+    width: 50%;
+    padding: 10px;
+    border: 1px outset #ae00ffb5;
+    border-radius: 15px;
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+#add-task-form input[type="text"]:hover, #add-task-form input[type="date"]:hover, #add-task-form input[type="time"]:hover, #add-task-form select:hover, #add-task-form group-select:hover {
+    background-color: #f700ff84;
+    border: #1e00ff outset 4px;
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+#add-task-form input[type="text"]:focus, #add-task-form input[type="date"]:focus, #add-task-form input[type="time"]:focus, #add-task-form select:focus, #add-task-form group-select:focus {
+    background-color: #8000ff78;
+    border: #e1d714 outset 6px;
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+#add-task-form {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    padding-left: 220px;;
+    margin-bottom: 20px;
+    margin-top: 50px; /* Adjust this value to match the height of #group-toolbar */
+}
+
+#task-list {
+    order: 2;
+    align-items: flex-start;
+}
+
+#task-list li {
+    text-align: left;
+}
+
+#task-list-header {
+    padding-left: 190px;
+    margin-top: 25px;
+}
+
+#task-list-header h2 {
+
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    font-style: italic;
+    color:#9900ff;}
+
+#task-list-header li {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:large;
+    font-style: italic;
+    color:#7300ff;
+    list-style-type:circle;
+    padding-bottom: 20px;
+    margin: 0px 10px 0px 10px
+}
+
+
+/* Style the submit button */
+#add-task-form input[type="submit"], #register-form input[type="submit"], #login-form input[id="submit"], #due-date input[type="submit"]{
+    background-color: #ae00ffb5;
+    border-radius: 15px;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+#add-task-form input[type="submit"]:hover, #register-form input[type="submit"]:hover, #login-form input[type="submit"]:hover{
+    background-color: #ae00ff;
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+#add-task-form input[type="submit"]:active, #register-form input[type="submit"]:active, #login-form input[type="submit"]:active{
+    background-color: #5d00ff; 
+    border: #f6ff00 solid 3px;
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+#add-task-form:active {
+    background-color: #a3a3a3; 
+    border: 3px inset #6600ff;
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for the background color */
+
+}
+
+#edit-task-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+#new-group-name, #create-group {
+    margin-bottom: 15px;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ae00ffb5;
+    border-radius: 15px;
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+#new-group-name:hover, #create-group:hover {
+    background-color: #ae00ff38;
+    border: #1e00ff solid 4px;
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+#groups-container {
+    position: relative; /* Changed this from absolute to relative */
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+    background-color: #d6ceff;
+}
+
+#groups-container div {
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: black;
+}
+
+#groups-container h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+#groups-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#group-select{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+#workspace {
+    margin-left: 109px; /* Adjust this value to match the width of #group-toolbar */
+    padding-left: 105px;
+    background-color: #f8f9fa;
+    width: calc(100% - 200px); /* Adjust this value to match the width of #group-toolbar */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the group items */
+.group {
+    background-color: #ae00ffb5;
+    border-radius: 15px;
+    color: rgb(249, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+.group-item {
+    cursor: pointer; 
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+}
+
+/* Style for the group items when hovered */
+.group-item:hover {
+    background-color: #ae00ffb5; 
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+/* Style for the group items when active (clicked) */
+.group-item:active {
+    background-color: #5d00ff; 
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+
+}
+
+.edit-task, .delete-task {
+    margin-bottom: 15px;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ae00ffb5;
+    border-radius: 15px;
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+}
+
+.edit-task:hover, .delete-task:hover {
+    background-color: #ae00ffb5; 
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+    border: blue solid 3px;
+
+}
+
+.edit-task:active, .delete-task:active {
+    background-color: #ae00ffb5; 
+    transition: background-color 0.5s ease; /* Smooth transition for the background color */
+    border: gold solid 3px;
+
+}

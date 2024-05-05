@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+    <title>Workspace</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- <script src="{{ url_for('static', filename='workspace.js') }}" defer></script> -->
+{% endblock %}
+
+{% block contents %}
+    <body class="workspace-page">
+    <div id="group-toolbar">
+        <!-- Group toolbar content -->
+        <h2>Groups</h2>
+        <input id="new-group-name" type="text" placeholder="Enter new group name">
+        <button id="create-group">Create Group</button>
+        <div id="groups-container">
+            <!-- Group items will be dynamically added here -->
+        </div>
+    </div>
+
+    <div id="workspace">
+        <h2 id="workspace-form-h2">Add a New Task</h2>
+        <form id="add-task-form">
+            <label for="group-select">Select Group:</label>
+            <select id="group-select" required></select>
+            <br>
+                <!-- Group options will be added here -->
+            <label for="task-name">Task Name:</label>
+            <input type="text" id="task-name" name="task-name" required>
+            <label for="task-desc">Task Description:</label>
+            <input type="text" id="task-desc" name="task-desc" required>
+            <label for="due-date">Due Date:</label>
+            <input type="date" id="due-date" name="due-date">
+            <label for="new-task-time">Due Time:</label>
+            <input type="time" id="new-task-time">
+            <input type="submit" id="add-task" value="Add Task">
+        </form>
+    </div>
+
+    <div id="task-list-header"> 
+        <h2>Here are your current tasks:</h2>
+        <ul id="task-list">
+            <!-- Placeholder for when there are no tasks -->
+            <li id="placeholder">Oh my! There are no tasks to display. Busy bee? Then add some tasks!
+                <img id="placeholderimg" src="{{ url_for('static', filename='images/nothinghere.jpg') }}" alt="Placeholder image">         
+                <!-- Task items will be added here -->
+            </li>
+        </ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='workspace.js') }}" ></script>
+
+    </body>
+{% endblock %}
